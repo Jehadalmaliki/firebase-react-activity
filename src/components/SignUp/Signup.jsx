@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -8,6 +8,13 @@ export default function Signup() {
   const signUp = async (e) => {
     e.preventDefault();
     // Put the signUp code here
+    const auth = getAuth();
+    console.log(auth)
+  await  createUserWithEmailAndPassword(auth, email, password)
+  
+
+ 
+ 
   };
   return (
     <>

@@ -22,6 +22,7 @@ const Home = () => {
 
   const getListOfTodos = async () => {
     // Write the code to get the todo list here
+    
   };
 
   const addTodo = async (e) => {
